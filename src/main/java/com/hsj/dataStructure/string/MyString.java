@@ -1,4 +1,5 @@
 package com.hsj.dataStructure.string;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -184,6 +185,7 @@ public class MyString<E> {
                 return i;
             }
         }
+        
         return -1;
     }
     @Override

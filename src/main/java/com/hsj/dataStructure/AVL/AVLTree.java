@@ -69,14 +69,14 @@ public class AVLTree<K extends Comparable<K>,V>{
             //添加的节点在左边的右边
             if (balanceFactor > 1 && getBalanceFactor(node.left) < 0) {
                 //先一次左旋。
-                node.left = LleftRotate(node);
+                node.left = LleftRotate(node.left);
                 //再一次右旋
                 return RrightRotate(node);
             }
             //添加的节点在右边的左边
             if (balanceFactor < -1 && getBalanceFactor(node.left) > 0) {
                 //先一次右旋
-                node.right = RrightRotate(node);
+                node.right = RrightRotate(node.right);
                 //在一次左旋
                 return LleftRotate(node);
             }
