@@ -173,3 +173,21 @@ for (int i=size-1;i>=index;i--) {
 
 栈这种数据结构的特点是先进后出（FILO：Fist In Lsat Out），栈这个字在汉语里古人用栈来来形容干草堆，所以用栈来形容FILO这种数据结构是很形象的。
 
+第一个进入栈内存的元素，最后出去，最后进入的元素第一个退出栈空间。Java方法的执行也是在方法栈中，所以如果死循环的调用会造成栈溢
+
+```java
+//在上面数组添加元素的基础上实现在数组头和数组尾元素的添加
+public void addFrist(E e){
+    add(e,0);
+}
+public void addLast(E e){
+    add(e size);
+}
+```
+
+栈的实现
+
+```java
+//
+```
+

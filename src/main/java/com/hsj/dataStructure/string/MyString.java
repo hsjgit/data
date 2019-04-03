@@ -185,7 +185,7 @@ public class MyString<E> {
                 return i;
             }
         }
-        
+
         return -1;
     }
     @Override
