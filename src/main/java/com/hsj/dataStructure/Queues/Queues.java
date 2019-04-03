@@ -33,7 +33,7 @@ public class Queues<E> implements IQueues<E> {
      */
     @Override
     public void add(E e) throws IllegalAccessException {
-
+        myString.addLast(e);
     }
 
     /**
@@ -53,7 +53,7 @@ public class Queues<E> implements IQueues<E> {
      */
     @Override
     public int getSize() {
-        return 0;
+        return myString.getSize();
     }
 
     /**
@@ -62,7 +62,16 @@ public class Queues<E> implements IQueues<E> {
      * @return
      */
     @Override
-    public E element() {
-        return null;
+    public E element() throws IllegalAccessException {
+        return myString.getFrist();
+    }
+
+    /**
+     * <p>从队列中删除元素<p/>
+     * @return
+     * @throws IllegalAccessException
+     */
+    public E pop() throws IllegalAccessException {
+        return myString.removeFrist();
     }
 }

@@ -188,6 +188,68 @@ public void addLast(E e){
 栈的实现
 
 ```java
-//
+/**
+     * 入栈操作
+     * @param e
+     * @throws IllegalAccessException
+     */
+    @Override
+    public void push(E e) throws IllegalAccessException{
+        myStrings.addLast(e);
+
+
+    }
+
+    /**
+     * 出栈操作
+     * @return
+     * @throws IllegalAccessException
+     */
+    @Override
+    public E pop() throws IllegalAccessException {
+        return myStrings.removeLast();
+    }
+
+    /**
+     * 返回栈顶的元素，而不是删除它
+     * @return
+     * @throws IllegalAccessException
+     */
+    @Override
+    public E peek() throws IllegalAccessException {
+       return myStrings.getValue(getSize() - 1);
+    }
 ```
 
+### 队列
+
+队列这种数据结构特点事先进先出（FIFO：Frist In Frist Out），类似于排队。
+
+队列的实现
+
+```java
+/**
+     * 向队列添加元素
+     *
+     * @param e 添加的元素
+     * @throws IllegalAccessException
+     */
+    @Override
+    public void add(E e) throws IllegalAccessException {
+        myString.addLast(e);
+    }
+/**
+     * <p>从队列中删除元素<p/>
+     * @return
+     * @throws IllegalAccessException
+     */
+    public E pop() throws IllegalAccessException {
+        return myString.removeFrist();
+    }
+```
+
+## 链表
+
+### 单链表
+
+链表就是多个节点组成的线性表，每个节点都有连个值，一个是节点本身的值，和当前节点的下一个节点引用
