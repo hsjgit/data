@@ -344,7 +344,7 @@ public class BST<E extends Comparable<E>> {
                 size--;
                 return right;
             }
-            Node souccer = minmum(node.rightnode);//得到以node.rightnode为根的最的节点
+            Node souccer = minmum(node.rightnode);//得到以node.rightnode为根的最小的节点
             souccer.rightnode = removeMin(node.rightnode);
             souccer.leftnode = node.leftnode;
             node.rightnode=node.leftnode=null;

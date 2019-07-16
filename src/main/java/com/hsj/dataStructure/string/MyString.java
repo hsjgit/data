@@ -1,9 +1,8 @@
 package com.hsj.dataStructure.string;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * 自己学的一个数组类
+ * 自己写的一个数组类
  * @author 黄仕杰
  * Created by 黄仕杰 on 2019/2/10.
  * @date 2019/2/10
@@ -201,6 +200,14 @@ public class MyString<E> {
         }
         res.append(']');
         return res.toString();
+    }
+
+    public static void main(String[] args) throws IllegalAccessException {
+        MyString<String> m = new MyString<>();
+        m.addLast("s");
+        m.addLast("g");
+        m.removeLast();
+        System.out.println(m);
     }
 
 }

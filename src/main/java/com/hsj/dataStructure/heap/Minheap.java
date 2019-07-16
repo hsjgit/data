@@ -100,6 +100,11 @@ public class Minheap<E extends Comparable<E>> {
         sitfUp(list.size() - 1);
     }
 
+    /**
+     * 上浮
+     * @param i
+     * @throws IllegalAccessException
+     */
     private void sitfUp(int i) throws IllegalAccessException {
         while (i > 0 && list.get(i).compareTo(list.get(parent(i))) < 0) {
             swap(i, parent(i));
@@ -116,17 +121,20 @@ public class Minheap<E extends Comparable<E>> {
         swap(0, list.size() - 1);
 
         list.remove(list.size() - 1);
-        //System.out.println(list.get(list.size() - 1));
         siftDowm(0);
         return e;
     }
 
+    /**
+     * 下浮
+     * @param i
+     */
     private void siftDowm(int i) {
         while (left(i) < list.size()) {
             int j = left(i);
 
             if (j + 1 < list.size() && list.get(j).compareTo(list.get(j + 1)) > 0) {
-                System.out.println(list.get(j) + "----" + list.get(j + 1));
+
                 j = rigth(i);
             }
             if (list.get(i).compareTo(list.get(j)) < 0) {

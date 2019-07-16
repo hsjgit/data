@@ -53,6 +53,7 @@ public class ListNode<E>{
      * @param e
      */
     public void add(E e,int index){
+        //前一个节点
         Node prev= dummyHead;
         for (int i=0;i<index;i++){
             prev=prev.next;
@@ -85,7 +86,7 @@ public class ListNode<E>{
      */
     public E remove(int index){
         Node prev=dummyHead;
-        for (int i=0;i<index;i++){
+        for (int i=0;i<index-1;i++){
             prev=prev.next;
         }
         Node renode=prev.next;
@@ -157,7 +158,7 @@ public class ListNode<E>{
         listNode.addFrist("dsad2");
         listNode.addLast("huangshijie");
         System.out.println(listNode);
-        listNode.removeFrist();
+        listNode.removeLast();
         System.out.println(listNode);
         System.out.println(listNode.contains("dsad"));
 

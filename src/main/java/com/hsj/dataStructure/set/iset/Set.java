@@ -1,7 +1,9 @@
 package com.hsj.dataStructure.set.iset;
 
 /**
- * Created by 黄仕杰 on 2019/2/19.
+ *
+ * @author 黄仕杰
+ * @date 2019/2/19
  */
 public interface Set<E> {
     public void add(E e);
